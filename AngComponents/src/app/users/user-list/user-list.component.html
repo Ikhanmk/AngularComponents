@@ -1,1 +1,5 @@
 <p>user-list works!</p>
+
+<app-filter-users [name] = "'Imran Khan'" [phone] = "phone" (updatedList)="updatedUsers($event)"></app-filter-users>
+
+<h3>{{update | json}}</h3>

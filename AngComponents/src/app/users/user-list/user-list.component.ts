@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
+  phone = 12345;
+  update = {}
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  updatedUsers(event: any){
+    this.update = event
+    
+    
   }
 
 }
