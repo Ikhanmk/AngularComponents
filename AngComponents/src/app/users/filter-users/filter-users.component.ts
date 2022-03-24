@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+import { UserServiceService } from 'src/app/service/user-service.service';
 
 @Component({
   selector: 'app-filter-users',
@@ -13,9 +14,13 @@ export class FilterUsersComponent implements OnInit {
 
   @Output() updatedList = new EventEmitter()
 
-  constructor() { }
+  obj ={}
+
+  constructor(private userServiceService: UserServiceService) { }
+
 
   ngOnInit(): void {
+   this.obj = this.userServiceService.getUser()
   }
 
   updateUser():void {
